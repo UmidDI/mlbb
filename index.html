@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends Faktlar va Missiyalar</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Legends: Faktlar va Missiyalar</h1>
+    <div class="container">
+        <button onclick="showFacts()">Faktlar</button>
+        <button onclick="showMissions()">Missiyalar</button>
+        <div id="content">
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+    <script>
+        const facts = [
+            "Mobile Legends 2016-yilda chiqarilgan va 1 milliarddan ortiq yuklab olingan.",
+            "Lesley va Harley – aka-uka va ularning hikoyasi bog‘langan.",
+            "O‘yin har oy yangi skinlar va qahramonlar bilan yangilanadi.",
+            "Moskov eng uzoq masofaga otish rekordiga ega."
+        ];
+
+        const missions = [
+            "No Death Challenge – Bitta ham o‘lishsiz g‘alaba qozon.",
+            "Solo Carry – Jamoangni mustaqil ravishda g‘alabaga olib bor.",
+            "Only Basic Attack – Faqat oddiy hujumlar bilan raqiblarni yeng.",
+            "Full Tank Damage – Tank qahramon o‘ynab, eng ko‘p damage berishga harakat qil."
+        ];
+
+        function showFacts() {
+            displayList(facts);
+        }
+
+        function showMissions() {
+            displayList(missions);
+        }
+
+        function displayList(items) {
+            const listElement = document.getElementById("list");
+            listElement.innerHTML = "";
+            items.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                listElement.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
