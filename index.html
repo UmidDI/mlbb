@@ -3,116 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameZoneBattalion</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('https://wallpaperaccess.com/full/1905476.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
-        }
-        button {
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        button:hover {
-            background: linear-gradient(45deg, #ff4b2b, #ff416c);
-            transform: scale(1.05);
-        }
-        ul {
-            text-align: left;
-            padding-left: 20px;
-            list-style: none;
-        }
-        li {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-        }
-        li img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
-        li:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-    </style>
-</head>
-<body>
-    <h1>🔥 Gaming Hub: Mobile Legends, PUBG, Free Fire 🔥</h1>
-    <div class="container">
-        <button onclick="showContent('ml')">🎮 Mobile Legends</button>
-        <button onclick="showContent('pubg')">🔫 PUBG Mobile</button>
-        <button onclick="showContent('ff')">🔥 Free Fire</button>
-        <div id="content">
-            <ul id="list"></ul>
-        </div>
-    </div>
-
-    <script>
-        const gameData = {
-            ml: [
-                { text: "Mobile Legends 2016-yilda chiqarilgan va 1 milliarddan ortiq yuklab olingan.", img: "https://example.com/ml_icon1.png" },
-                { text: "Lesley va Harley – aka-uka va ularning hikoyasi bog‘langan.", img: "https://example.com/ml_icon2.png" },
-                { text: "Moskov eng uzoq masofaga otish rekordiga ega.", img: "https://example.com/ml_icon3.png" },
-                { text: "O‘yinda yashirin sirlar bor – ba'zi qahramonlarning o‘ziga xos maxfiy ovozlari mavjud.", img: "https://example.com/ml_icon4.png" }
-            ],
-            pubg: [
-                { text: "PUBG Mobile 2018-yilda chiqarilgan va Battle Royale janrini ommalashtirgan.", img: "https://example.com/pubg_icon1.png" },
-                { text: "Har bir xarita o‘ziga xos strategiyalarni talab qiladi.", img: "https://example.com/pubg_icon2.png" },
-                { text: "Kar98K eng mashhur snayper qurollaridan biridir.", img: "https://example.com/pubg_icon3.png" },
-                { text: "Erangel eng ko‘p o‘ynaladigan xaritalardan biridir.", img: "https://example.com/pubg_icon4.png" }
-            ],
-            ff: [
-                { text: "Free Fire qisqa davomiylikdagi Battle Royale o‘yini sifatida mashhur.", img: "https://example.com/ff_icon1.png" },
-                { text: "O‘yin har oy yangi xususiyatlar va skinlar bilan yangilanadi.", img: "https://example.com/ff_icon2.png" },
-                { text: "Alok va Chrono kabi maxsus qahramonlar o‘yin davomida katta ustunlik beradi.", img: "https://example.com/ff_icon3.png" },
-                { text: "Booyah olish uchun strategik harakat qilish kerak!", img: "https://example.com/ff_icon4.png" }
-            ]
-        };
-
-        function showContent(game) {
-            displayList(gameData[game]);
-        }
-
-        function displayList(items) {
-            const listElement = document.getElementById("list");
-            listElement.innerHTML = "";
-            items.forEach(item => {
-                const li = document.createElement("li");
-                const img = document.createElement("img");
-                img.src = item.img;
-                img.alt = "icon";
-                const textNode = document.createTextNode(item.text);
-                li.appendChild(img);
-                li.appendChild(textNode);
-                listElement.appendChild(li);
-            });
-        }
-    </script>
+    <header>
+        <h1>Gaming Info Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#ml">Mobile Legends</a></li>
+                <li><a href="#pubg">PUBG</a></li>
+                <li><a href="#freefire">Free Fire</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="ml" class="game-section">
+        <h2>Mobile Legends</h2>
+        <p>Mobile Legends is a popular multiplayer online battle arena (MOBA) game...</p>
+        <button>Learn More</button>
+    </section>
+    
+    <section id="pubg" class="game-section">
+        <h2>PUBG</h2>
+        <p>PUBG (PlayerUnknown's Battlegrounds) is a battle royale shooter...</p>
+        <button>Learn More</button>
+    </section>
+    
+    <section id="freefire" class="game-section">
+        <h2>Free Fire</h2>
+        <p>Free Fire is a fast-paced battle royale game designed for mobile users...</p>
+        <button>Learn More</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Gaming Info Hub. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
