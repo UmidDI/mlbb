@@ -9,41 +9,56 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #111;
+            background: url('https://wallpaperaccess.com/full/1905476.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 20px;
         }
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: auto;
-            background: #222;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
         }
         button {
-            background: #007BFF;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
             color: white;
             border: none;
-            padding: 10px 20px;
-            margin: 5px;
+            padding: 12px 24px;
+            margin: 10px;
             cursor: pointer;
             border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
         }
         button:hover {
-            background: #0056b3;
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            transform: scale(1.05);
         }
         ul {
             text-align: left;
             padding-left: 20px;
+            list-style: none;
+        }
+        li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        li:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
 <body>
-    <h1>Mobile Legends: Faktlar va Missiyalar</h1>
+    <h1>🔥 Mobile Legends: Faktlar va Missiyalar 🔥</h1>
     <div class="container">
-        <button onclick="showFacts()">Faktlar</button>
-        <button onclick="showMissions()">Missiyalar</button>
+        <button onclick="showFacts()">📜 Faktlar</button>
+        <button onclick="showMissions()">🎯 Missiyalar</button>
         <div id="content">
             <ul id="list"></ul>
         </div>
@@ -54,14 +69,18 @@
             "Mobile Legends 2016-yilda chiqarilgan va 1 milliarddan ortiq yuklab olingan.",
             "Lesley va Harley – aka-uka va ularning hikoyasi bog‘langan.",
             "O‘yin har oy yangi skinlar va qahramonlar bilan yangilanadi.",
-            "Moskov eng uzoq masofaga otish rekordiga ega."
+            "Moskov eng uzoq masofaga otish rekordiga ega.",
+            "O‘yinda yashirin sirlar bor – ba'zi qahramonlarning o‘ziga xos maxfiy ovozlari mavjud.",
+            "Franco va Bane bir-biriga dushman, chunki ikkalasi ham dengiz quldurlari jamoasiga tegishli."
         ];
 
         const missions = [
             "No Death Challenge – Bitta ham o‘lishsiz g‘alaba qozon.",
             "Solo Carry – Jamoangni mustaqil ravishda g‘alabaga olib bor.",
             "Only Basic Attack – Faqat oddiy hujumlar bilan raqiblarni yeng.",
-            "Full Tank Damage – Tank qahramon o‘ynab, eng ko‘p damage berishga harakat qil."
+            "Full Tank Damage – Tank qahramon o‘ynab, eng ko‘p damage berishga harakat qil.",
+            "Reverse Role – Odatda o‘ynamaydigan qahramon bilan o‘ynab, MVP olishga harakat qil.",
+            "No Recall Challenge – O‘yinda bitta ham bazaga qaytmay o‘yin tugat."
         ];
 
         function showFacts() {
