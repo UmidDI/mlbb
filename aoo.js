@@ -46,3 +46,4 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+<li><a href="#payments">To‘lovlar</a></li>

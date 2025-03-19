@@ -163,3 +163,22 @@ header {
 .play-button:hover {
     background: #00cc00;
 }
+.payment-section {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.payment-card {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff00;
+    background: black;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
